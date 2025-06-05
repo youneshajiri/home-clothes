@@ -1,0 +1,238 @@
+<!-- Featured Categories -->
+<section id="cba">
+    <div class="container-full">
+        <h2 class="section-title" id="abc">Shop By Category</h2>
+        <div class="categories-slider">
+            <div class="categories-slider-track">
+                <!-- Chaque carte de catégorie avec vérification d'image -->
+                <div class="category-card">
+                    <div class="category-img-container">
+                        <img alt="Women's Collection" class="category-img" src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" onerror="this.parentNode.style.display='none'"/>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Women</h3>
+                        <a class="btn" href="#">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img-container">
+                        <img alt="Men's Collection" class="category-img" src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" onerror="this.parentNode.style.display='none'"/>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Men</h3>
+                        <a class="btn" href="#">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img-container">
+                        <img alt="Kids Collection" class="category-img" src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" onerror="this.parentNode.style.display='none'"/>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Kids</h3>
+                        <a class="btn" href="#">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img-container">
+                        <img alt="Accessories" class="category-img" src="https://images.unsplash.com/photo-1592155931584-901ac15763e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" onerror="this.parentNode.style.display='none'"/>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Accessories</h3>
+                        <a class="btn" href="#">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img-container">
+                        <img alt="Shoes" class="category-img" src="https://images.unsplash.com/photo-1463100099107-aa0980c362e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" onerror="this.parentNode.style.display='none'"/>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Shoes</h3>
+                        <a class="btn" href="#">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img-container">
+                        <img alt="Bags" class="category-img" src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" onerror="this.parentNode.style.display='none'"/>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Bags</h3>
+                        <a class="btn" href="#">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Styles de base existants */
+    .container-full {
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+    
+    .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2rem;
+        color: #333;
+    }
+    
+    .category-card {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        min-height: 300px;
+        background-color: #f5f5f5; /* Fond de secours si l'image ne charge pas */
+    }
+    .container-full {
+    width: 100%;
+    padding: 0 10px; /* facultatif */
+    margin: 0;
+    max-width: 100%;
+}
+    .category-img-container {
+        height: 300px;
+        overflow: hidden;
+    }
+    
+    .category-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .category-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background: linear-gradient(transparent, rgba(0,0,0,0.7));
+        color: white;
+        text-align: center;
+    }
+    
+    .category-title {
+        margin: 0 0 10px 0;
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 8px 20px;
+        background-color: #fff;
+        color: #333;
+        text-decoration: none;
+        border-radius: 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+        background-color: #333;
+        color: #fff;
+    }
+    
+    /* Nouveaux styles pour le slider */
+    .categories-slider {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .categories-slider-track {
+        display: flex;
+        transition: transform 0.5s ease;
+        will-change: transform;
+    }
+    
+    .category-card {
+        flex: 0 0 100%;
+        margin-right: 15px;
+    }
+    
+    /* Animation automatique */
+    @keyframes slide {
+        0%, 16.66% { transform: translateX(0); }
+        20%, 36.66% { transform: translateX(-100%); }
+        40%, 56.66% { transform: translateX(-200%); }
+        60%, 76.66% { transform: translateX(-300%); }
+        80%, 96.66% { transform: translateX(-400%); }
+        100% { transform: translateX(-500%); }
+    }
+    
+    .categories-slider-track {
+        animation: slide 24s infinite;
+    }
+    
+    /* Responsive */
+    @media (min-width: 768px) {
+        .category-card {
+            flex: 0 0 calc(50% - 10px);
+        }
+        
+        @keyframes slide {
+            0%, 12.5% { transform: translateX(0); }
+            16.66%, 29.16% { transform: translateX(-50%); }
+            33.33%, 45.83% { transform: translateX(-100%); }
+            50%, 62.5% { transform: translateX(-150%); }
+            66.66%, 79.16% { transform: translateX(-200%); }
+            83.33%, 95.83% { transform: translateX(-250%); }
+            100% { transform: translateX(-300%); }
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .category-card {
+            flex: 0 0 calc(33.333% - 10px);
+        }
+        
+        @keyframes slide {
+            0%, 8.33% { transform: translateX(0); }
+            11.11%, 19.44% { transform: translateX(-33.333%); }
+            22.22%, 30.55% { transform: translateX(-66.666%); }
+            33.33%, 41.66% { transform: translateX(-100%); }
+            44.44%, 52.77% { transform: translateX(-133.333%); }
+            55.55%, 63.88% { transform: translateX(-166.666%); }
+            66.66%, 75% { transform: translateX(-200%); }
+            77.77%, 86.11% { transform: translateX(-233.333%); }
+            88.88%, 97.22% { transform: translateX(-266.666%); }
+            100% { transform: translateX(-300%); }
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sliderTrack = document.querySelector('.categories-slider-track');
+        
+        // Pause au survol
+        sliderTrack.addEventListener('mouseenter', function() {
+            this.style.animationPlayState = 'paused';
+        });
+        
+        sliderTrack.addEventListener('mouseleave', function() {
+            this.style.animationPlayState = 'running';
+        });
+        
+        // Vérification des images chargées
+        const images = document.querySelectorAll('.category-img');
+        images.forEach(img => {
+            // Si l'image n'a pas encore chargé, vérifier si elle échoue
+            if (!img.complete) {
+                img.onerror = function() {
+                    this.parentNode.style.display = 'none';
+                    // Ajuster la largeur de la carte parente
+                    this.closest('.category-card').style.flex = '0 0 0';
+                    this.closest('.category-card').style.marginRight = '0';
+                };
+            }
+        });
+    });
+</script>
