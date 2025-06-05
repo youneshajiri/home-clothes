@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nos Services</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --black: #0a0a0a;
+      --white: #ffffff;
+      --custom-gray: #b7b4b4;
+      --gray-dark: #333333;
+      --gray-light: #f5f5f5;
+      --border-radius: 8px;
+      --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    body {
+      color: var(--white);
+      background-color: var(--black);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .full-width-section {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      
+      padding: 0 1rem 5rem;
+    }
+    #abc{
+            margin-top: 0px;
+        }
+    .section-title {
+        
+      text-align: center;
+      margin: 4rem 0 3rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--white) !important;
+      padding: 1rem;
+      background-color: var(--gray-dark);
+      border-radius: var(--border-radius);
+      position: relative;
+    }
+    .services{
+padding-top:10px;
+}
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background-color: var(--white);
+      margin: 1rem auto 0;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: var(--gray-dark);
+      border: 1px solid var(--custom-gray);
+      border-radius: var(--border-radius);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--box-shadow);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--custom-gray);
+    }
+
+    .service-title {
+      font-size: 1.4rem;
+      color: var(--white) !important;
+      margin-bottom: 0.8rem;
+    }
+
+    .service-text {
+      color: var(--white);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1024px) {
+      .section-title {
+        font-size: 2.2rem;
+      }
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .service-title {
+        font-size: 1.3rem;
+      }
+      .service-icon {
+        font-size: 2.2rem;
+      }
+      .service-card {
+        padding: 1.8rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+      }
+      .services {
+        grid-template-columns: 1fr;
+      }
+      .service-card {
+        padding: 1.5rem 1rem;
+      }
+      .service-title {
+        font-size: 1.2rem;
+      }
+      .service-icon {
+        font-size: 2rem;
+      }
+      .service-text {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (min-width: 900px) and (max-width: 1192px) {
+      .service-card {
+        padding: 2.5rem;
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="full-width-section">
+    <h2 class="section-title" id="abc">Nos Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <i class="fas fa-truck service-icon"></i>
+        <h3 class="service-title">Livraison Rapide</h3>
+        <p class="service-text">Recevez votre commande sous 24-48 heures à Casablanca grâce à notre service express.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-exchange-alt service-icon"></i>
+        <h3 class="service-title">Retours Faciles</h3>
+        <p class="service-text">Pas satisfait ? Retournez vos articles sous 14 jours pour un remboursement ou un échange.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-tshirt service-icon"></i>
+        <h3 class="service-title">Qualité Premium</h3>
+        <p class="service-text">Nous ne sélectionnons que les meilleurs matériaux pour des vêtements durables.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-headset service-icon"></i>
+        <h3 class="service-title">Support Dédié</h3>
+        <p class="service-text">Notre service client est disponible 7 jours sur 7 pour vous aider.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
