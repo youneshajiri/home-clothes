@@ -1,0 +1,160 @@
+<style>
+        :root {
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --custom-gray: #b7b4b4;
+            --gray-dark: #333333;
+            --gray-medium: #777777;
+            --gray-light: #f5f5f5;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        body {
+            color: var(--white);
+            line-height: 1.6;
+            background-color: var(--black);
+            overflow-x: hidden;
+        }
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Section Titles */
+        /*--------------------------------------------------------------*/
+        .section-title {
+            text-align: center;
+            margin: 5rem 0 3rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--white);
+            position: relative;
+            padding-bottom: 1rem;
+            background-color: var(--gray-dark);
+            padding: 20px;
+            border-radius: var(--border-radius);
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--white);
+            margin: 1rem auto 0;
+        }
+        /* Instagram Feed */
+        /*--------------------------------------------------------------*/
+        .instagram-feed {
+            margin-bottom: 5rem;
+        }
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+        .instagram-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            aspect-ratio: 1/1;
+        }
+        .instagram-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .instagram-item:hover .instagram-img {
+            transform: scale(1.1);
+        }
+        .instagram-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(10, 10, 10, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .instagram-item:hover .instagram-overlay {
+            opacity: 1;
+        }
+        .instagram-icon {
+            color: var(--custom-gray);
+            font-size: 1.5rem;
+        }
+        /* Responsive Styles */
+        /*--------------------------------------------------------------*/
+        @media (max-width: 992px) {
+            .instagram-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .instagram-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+</style>
+
+<!-- Instagram Feed -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<section>
+    <div class="container-full">
+        <h2 class="section-title"id="abc">Follow Us @CasablancaFashion</h2>
+        <div class="instagram-feed">
+            <div class="instagram-grid">
+                <div class="instagram-item">
+                    <img alt="Instagram Post" class="instagram-img" src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80"/>
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                    </div>
+                </div>
+                <div class="instagram-item">
+                    <img alt="Instagram Post" class="instagram-img" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80"/>
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                    </div>
+                </div>
+                <div class="instagram-item">
+                    <img alt="Instagram Post" class="instagram-img" src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80"/>
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                    </div>
+                </div>
+                <div class="instagram-item">
+                    <img alt="Instagram Post" class="instagram-img" src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80"/>
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                    </div>
+                </div>
+                <div class="instagram-item">
+                    <img alt="Instagram Post" class="instagram-img" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80"/>
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
