@@ -1,0 +1,107 @@
+<style>
+        :root {
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --custom-gray: #b7b4b4;
+            --gray-dark: #333333;
+            --gray-medium: #777777;
+            --gray-light: #f5f5f5;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        body {
+            /* Removed body styles as they might conflict when embedded */
+            line-height: 1.6;
+        }
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--white);
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .btn:hover {
+            background-color: var(--white);
+            color: var(--black);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        /* About Section */
+        /*--------------------------------------------------------------*/
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 5rem;
+            /* Added background and padding for standalone visibility if needed */
+            background-color: var(--white); /* Assuming light background for black text */
+            padding: 3rem 0; /* Add some padding */
+            color: var(--gray-dark); /* Default text color for this section */
+        }
+        .about-img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        .about-content {
+            padding: 2rem;
+        }
+        .about-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--black); /* Explicitly black */
+        }
+        .about-text {
+            margin-bottom: 1.5rem;
+            color: var(--black); /* Explicitly black */
+            line-height: 1.8;
+        }
+        /* Responsive Styles */
+        /*--------------------------------------------------------------*/
+        @media (max-width: 992px) {
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+            .about-img {
+                height: 400px;
+            }
+        }
+</style>
+
+<!-- About Section -->
+<section>
+    <div class="container-full">
+        <div class="about-section">
+            <img alt="Our Story" class="about-img" src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80"/>
+            <div class="about-content">
+                <h2 class="about-title">Our Story</h2>
+                <p class="about-text">Over the years, our brand has grown into a symbol of refined taste, catering to individuals who seek sophistication without compromising on comfort or quality. Each piece in our collection is thoughtfully designed and expertly tailored, reflecting our passion for excellence and our deep understanding of the evolving fashion landscape.</p>
+                <p class="about-text">At Casablanca Fashion, we believe that true luxury lies in the details — from the choice of premium fabrics to the precision of every stitch. Our collections draw inspiration from global trends while staying rooted in classic design principles, creating a unique fusion that resonates with both tradition and innovation.</p>
+
+                <a class="btn" href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
